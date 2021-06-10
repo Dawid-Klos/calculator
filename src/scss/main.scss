@@ -1,6 +1,9 @@
 @import "~normalize.css";
 @import "_variables";
 
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
 body {
   background: $bg;
   color: #fff;
@@ -9,3 +12,104 @@ body {
   justify-content: center;
   min-height: 100vh;
 }
+
+.calculator {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  display: flex;
+  flex-flow: row nowrap;
+    &__heading {
+
+    }
+}
+
+.theme {
+
+    &__text {
+
+    }
+    &__input {
+
+    }
+}
+
+.result {
+
+    &__number {
+
+    }
+}
+
+.buttons {
+
+}
+
+.numbers {
+
+    &__seven {
+
+    }
+    &__eight {
+
+    }
+    &__nine {
+
+    }
+    &__delete {
+
+    }
+    &__four {
+
+    }
+    &__five {
+
+    }
+    &__six {
+
+    }
+    &__plus {
+
+    }
+    &__one {
+
+    }
+    &__two {
+
+    }
+    &__three {
+
+    }
+    &__minus {
+
+    }
+    &__dot {
+
+    }
+    &__divide {
+
+    }
+    &__multiply {
+
+    }
+}
+
+.actions {
+
+  &__reset {
+
+  }
+  &__equal {
+
+  }
+}
+
+.attribution {
+
+}
+
+

@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
-    <meta name="description" content="Simple calculator which you can use for addition, subtraction, multiplication and division. The app is available with 3 themes." />
+    <meta
+      name="description"
+      content="Simple calculator which you can use for addition, subtraction, multiplication and division. The app is available with 3 themes."
+    />
     <!-- Title -->
     <meta property="og:title" content="" />
     <!-- OPTIONAL description. 2-4 sentences. -->
@@ -146,14 +149,48 @@
   </head>
   <body>
     <section class="calculator">
-      <div class="title-container">
-        <h1 class="title">calc</h1>
-        <div class="theme-container">
-          <p>theme</p>
+      <div class="title">
+        <h1 class="title__heading">calc</h1>
+
+        <div class="theme">
+          <p class="theme__text">THEME</p>
+          <input class="theme__input" type="range" min="0" max="2" />
         </div>
       </div>
-      <div class="result"></div>
-      <div class="buttons"></div>
+
+      <div class="result">
+        <p class="result__number">99,99</p>
+      </div>
+
+      <div class="buttons">
+        <div class="numbers">
+          <p class="numbers__seven">7</p>
+          <p class="numbers__eight">9</p>
+          <p class="numbers__nine">9</p>
+          <p class="numbers__delete">DEL</p>
+          <p class="numbers__four">4</p>
+          <p class="numbers__five">5</p>
+          <p class="numbers__six">6</p>
+          <p class="numbers__plus">+</p>
+          <p class="numbers__one">1</p>
+          <p class="numbers__two">2</p>
+          <p class="numbers__three">3</p>
+          <p class="numbers__minus">-</p>
+          <p class="numbers__dot">.</p>
+          <p class="numbers__divide">7</p>
+          <p class="numbers__multiply">7</p>
+        </div>
+        <div class="actions">
+          <p class="actions__reset">RESET</p>
+          <p class="actions__equal">=</p>
+        </div>
+      </div>
     </section>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Dawid Klos</a>.
+    </div>
+
   </body>
 </html>
