@@ -28,6 +28,7 @@ body {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  margin-bottom: 10px;
     &__heading {
 
     }
@@ -62,7 +63,7 @@ body {
   background-color: $bg-top;
   padding: 16px;
   border-radius: 16px;
-  margin-bottom: 32px;
+  margin-bottom: 20px;
     &__number {
       display: flex;
       justify-content: flex-end;
@@ -79,6 +80,7 @@ body {
   border-radius: 16px;
 }
 .numbers button {
+  border: none;
   background-color: $button;
   width: 75%;
   font-size: 30px;
@@ -162,11 +164,13 @@ body {
   color: $font-blue;
   font-weight: bold;
   width: 100%;
-  
+  border: none;
+  box-shadow: inset  0px -4px $button-shadow;
 }
 
 .attribution {
-  margin-top: 32px;
+  font-size: 14px;
+  margin-top: 64px;
 }
 
 
