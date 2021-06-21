@@ -40,9 +40,9 @@ body {
   align-items: center;
 
     &__text {
-      font-weight: 700;
+      font-weight: 600;
       font-size: 12px;
-      margin-right: 18px;
+      margin-right: 14px;
     }
     &__input {
       width: 68px;
@@ -55,9 +55,11 @@ body {
     &__input::before {
       position: absolute;
       margin-top: -20px;
-      width: 60px;
+      margin-left: 4px;
+      width: 66px;
       color: $font-white;
-      content: "1 2 3";
+      font-weight: 700;
+      content: "1 \00a0 \00a0 \00a0 \00a0 \00a0 2 \00a0 \00a0 \00a0 \00a0 \00a0 3";
       font-size: 12px;
     }
 }
