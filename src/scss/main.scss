@@ -45,7 +45,7 @@ body {
       margin-right: 14px;
     }
     &__input {
-      width: 68px;
+      width: 60px;
       -webkit-appearance: none;
       appearance: none;
       background-color: $bg-bottom;
@@ -56,10 +56,10 @@ body {
       position: absolute;
       margin-top: -20px;
       margin-left: 4px;
-      width: 66px;
+      width: 54px;
       color: $font-white;
-      font-weight: 700;
-      content: "1 \00a0 \00a0 \00a0 \00a0 \00a0 2 \00a0 \00a0 \00a0 \00a0 \00a0 3";
+      font-weight: 600;
+      content: "1 \00a0 \00a0 \00a0 \00a0 2 \00a0 \00a0 \00a0 \00a0 3";
       font-size: 12px;
     }
 }
