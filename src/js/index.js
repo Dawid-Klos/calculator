@@ -14,7 +14,7 @@ const calculator = {
 };
 
 
-function updateResultDisplay(event) {
+function updateResultDisplay() {
     const display = document.querySelector(".result__number--js");
     display.innerHTML = calculator.result;
 };
@@ -37,7 +37,6 @@ buttons.addEventListener("click", (event) => {
         } else {
             calculator.result += target.value;
         }
-        
         updateResultDisplay();
         return;
     }
@@ -49,11 +48,16 @@ buttons.addEventListener("click", (event) => {
 
     if (target.classList.contains('clear')) {
         console.log('clear' , target.value);
+        calculator.result = calculator.result.slice(0, -1);
+        updateResultDisplay();
         return;
     }
 
     if (target.classList.contains('reset')) {
         console.log('reset' , target.value);
+        calculator.result = '0';
+        updateResultDisplay();
         return;
     }
 });
+
