@@ -40,16 +40,16 @@ body {
   align-items: center;
 
     &__text {
-      font-weight: 600;
+      font-weight: 700;
       font-size: 12px;
-      margin-right: 14px;
+      margin-right: 24px;
     }
     &__input {
       width: 60px;
       -webkit-appearance: none;
       appearance: none;
       background-color: $bg-bottom;
-      border-radius: 16px;
+      border-radius: 36px;
       padding: 4px;
     }
     &__input::before {
@@ -95,13 +95,14 @@ input[type=range]::-ms-thumb {
   width: 100%;
   background-color: $bg-top;
   padding: 16px;
-  border-radius: 16px;
+  padding: 8px 16px 8px 16px;
+  border-radius: 10px;
   margin-bottom: 20px;
     &__number {
       display: flex;
       justify-content: flex-end;
       font-weight: 600;
-      font-size: 48px;
+      font-size: 46px;
       margin: 24px;
     }
 }
@@ -110,16 +111,16 @@ input[type=range]::-ms-thumb {
   width: 100%;
   background-color: $bg-bottom;
   padding: 16px;
-  border-radius: 16px;
+  border-radius: 10px;
 }
 .numbers button {
   border: none;
   background-color: $button;
-  width: 90px;
+  width: 94px;
   font-size: 30px;
   font-weight: 600;
   justify-self: center;
-  margin: 9px;
+  margin: 10px;
   padding: 10px;
   color: $font-blue;
   border-radius: 8px;
