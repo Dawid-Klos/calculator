@@ -32,6 +32,13 @@ buttons.addEventListener("click", (event) => {
 
     if (target.classList.contains('digit')) {
         console.log('digit' , target.value);
+        if (calculator.result == '0') {
+            calculator.result = target.value;
+        } else {
+            calculator.result += target.value;
+        }
+        
+        updateResultDisplay();
         return;
     }
 
