@@ -7,57 +7,114 @@ import "../scss/main.scss";
 /* place your code below */
 
 const calculator = {
-    result: '0',
-    firstNumber: null,
-    secondNumber: null,
-    operation: null,
+  currentDisplay: "0",
+  firstNumber: null,
+  waitingForSecondNumber: false,
+  operation: null,
 };
 
+function updateResultOnDisplay() {
+  const display = document.querySelector(".result__number--js");
+  display.innerHTML = calculator.currentDisplay;
+}
+updateResultOnDisplay();
 
-function updateResultDisplay() {
-    const display = document.querySelector(".result__number--js");
-    display.innerHTML = calculator.result;
-};
+function calculate(operation, firstNumber, secondNumber) {
+  switch (operation) {
+    case "+":
+      calculator.currentDisplay = Number(firstNumber) + Number(secondNumber);
+      updateResultOnDisplay();
+      calculator.currentDisplay = 0;
+      calculator.firstNumber = 0;
+      calculator.waitingForSecondNumber = false;
+      break;
+    case "-":
+      calculator.currentDisplay = Number(firstNumber) - Number(secondNumber);
+      updateResultOnDisplay();
+      calculator.currentDisplay = 0;
+      calculator.firstNumber = 0;
+      calculator.waitingForSecondNumber = false;
+      break;
+    case "*":
+      calculator.currentDisplay = Number(firstNumber) * Number(secondNumber);
+      updateResultOnDisplay();
+      calculator.currentDisplay = 0;
+      calculator.firstNumber = 0;
+      calculator.waitingForSecondNumber = false;
+      break;
+    case "/":
+      calculator.currentDisplay = Number(firstNumber) / Number(secondNumber);
+      updateResultOnDisplay();
+      calculator.currentDisplay = 0;
+      calculator.firstNumber = 0;
+      calculator.waitingForSecondNumber = false;
+      break;
+  }
+}
 
-updateResultDisplay();
 
+// Listening for click and handling operations
 const buttons = document.querySelector(".buttons--js");
 
 buttons.addEventListener("click", (event) => {
-    const { target } = event;
+  const { target } = event;
 
-    if (!target.matches('button')) {
-        return;
+  if (!target.matches("button")) {
+    return;
+  }
+
+  if (target.classList.contains("digit")) {
+    if (calculator.currentDisplay == "0" && target.value == ".") {
+      target.value = "0.";
     }
 
-    if (target.classList.contains('digit')) {
-        console.log('digit' , target.value);
-        if (calculator.result == '0') {
-            calculator.result = target.value;
-        } else {
-            calculator.result += target.value;
-        }
-        updateResultDisplay();
-        return;
+    if (calculator.currentDisplay == "0" && target.value == "0") {
+      calculator.currentDisplay = "0";
+      updateResultOnDisplay();
+      return;
     }
 
-    if (target.classList.contains('operation')) {
-        console.log('operation' , target.value);
-        return;
+    if (calculator.currentDisplay == "0" && target.value !== "0") {
+      calculator.currentDisplay = target.value;
+    } else {
+      calculator.currentDisplay += target.value;
     }
 
-    if (target.classList.contains('clear')) {
-        console.log('clear' , target.value);
-        calculator.result = calculator.result.slice(0, -1);
-        updateResultDisplay();
-        return;
-    }
+    updateResultOnDisplay();
+    return;
+  }
 
-    if (target.classList.contains('reset')) {
-        console.log('reset' , target.value);
-        calculator.result = '0';
-        updateResultDisplay();
-        return;
+  if (target.classList.contains("operation")) {
+    if (target.value == "=") {
+      calculate(
+        calculator.operation,
+        calculator.firstNumber,
+        calculator.currentDisplay
+      );
+    } else {
+      calculator.firstNumber = calculator.currentDisplay;
+      calculator.currentDisplay = "0";
+      updateResultOnDisplay();
+      calculator.waitingForSecondNumber = true;
+      calculator.operation = target.value;
     }
+    return;
+  }
+
+  if (target.classList.contains("clear")) {
+
+    if (calculator.currentDisplay.length == 1) {
+      calculator.currentDisplay = 0;
+    } else {
+      calculator.currentDisplay = calculator.currentDisplay.slice(0, -1);
+    }
+    updateResultOnDisplay();
+    return;
+  }
+
+  if (target.classList.contains("reset")) {
+    calculator.currentDisplay = "0";
+    updateResultOnDisplay();
+    return;
+  }
 });
-
