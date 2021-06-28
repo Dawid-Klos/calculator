@@ -1,0 +1,22 @@
+@media (max-width: 425px) {
+    .title {
+        width: 100%;
+    }
+    .result {
+        width: 90%;
+    }
+    .buttons {
+        width: 90%;
+    }    
+    .numbers button {
+        width: 64px;
+        padding: 8px;
+        margin: 8px;
+        min-height: 74px;
+    }
+    .actions button {
+        margin: 8px;
+        min-height: 74px;
+    }
+
+}

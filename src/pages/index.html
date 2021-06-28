@@ -13,7 +13,7 @@
     <!-- OPTIONAL description. 2-4 sentences. -->
     <meta property="og:description" content="" />
     <!-- full url with http(s) ie. https://maciejkorsan.github.io/my-repo/ -->
-    <meta property="og:url" content="" />
+    <meta property="og:url" content="https://dawid-klos.github.io/calculator/" />
     <!-- full url to the image with http(s) ie. https://maciejkorsan.github.io/my-repo/assets/img/fb.png. Facebook suggests at least 1200 x 630. -->
     <meta
       property="og:image"
@@ -23,26 +23,7 @@
     <!-- uncomment the line below to enable PWA  -->
     <!-- <link rel="manifest" href="manifest.json" /> -->
 
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="pwa/apple-icon-180.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="167x167"
-      href="pwa/apple-icon-167.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="pwa/apple-icon-152.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="pwa/apple-icon-120.png"
-    />
+    <link rel="apple-touch-icon" href="pwa/apple-icon-180.png" />
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
 
@@ -68,16 +49,6 @@
     />
     <link
       rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1668-2224.png"
-      media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2224-1668.png"
-      media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
       href="pwa/apple-splash-1536-2048.png"
       media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
     />
@@ -88,13 +59,43 @@
     />
     <link
       rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1242-2688.png"
-      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+      href="pwa/apple-splash-1668-2224.png"
+      media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
     />
     <link
       rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2688-1242.png"
-      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+      href="pwa/apple-splash-2224-1668.png"
+      media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="pwa/apple-splash-1620-2160.png"
+      media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="pwa/apple-splash-2160-1620.png"
+      media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="pwa/apple-splash-1284-2778.png"
+      media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="pwa/apple-splash-2778-1284.png"
+      media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="pwa/apple-splash-1170-2532.png"
+      media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="pwa/apple-splash-2532-1170.png"
+      media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
     />
     <link
       rel="apple-touch-startup-image"
@@ -105,6 +106,16 @@
       rel="apple-touch-startup-image"
       href="pwa/apple-splash-2436-1125.png"
       media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="pwa/apple-splash-1242-2688.png"
+      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="pwa/apple-splash-2688-1242.png"
+      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
     />
     <link
       rel="apple-touch-startup-image"
@@ -154,7 +165,7 @@
 
         <div class="theme">
           <p class="theme__text">THEME</p>
-          <input class="theme__input"  type="range" value="0" min="0" max="2" />
+          <input class="theme__input" type="range" value="0" min="0" max="2" />
         </div>
       </div>
 
@@ -164,34 +175,57 @@
 
       <div class="buttons buttons--js">
         <div class="numbers">
-          <button type="button" value="7" class="numbers__seven digit">7</button>
-          <button type="button" value="8" class="numbers__eight digit">8</button>
+          <button type="button" value="7" class="numbers__seven digit">
+            7
+          </button>
+          <button type="button" value="8" class="numbers__eight digit">
+            8
+          </button>
           <button type="button" value="9" class="numbers__nine digit">9</button>
-          <button type="button" value="delete" class="numbers__delete clear">DEL</button>
+          <button type="button" value="delete" class="numbers__delete clear">
+            DEL
+          </button>
           <button type="button" value="4" class="numbers__four digit">4</button>
           <button type="button" value="5" class="numbers__five digit">5</button>
           <button type="button" value="6" class="numbers__six digit">6</button>
-          <button type="button" value="+" class="numbers__plus operation">+</button>
+          <button type="button" value="+" class="numbers__plus operation">
+            +
+          </button>
           <button type="button" value="1" class="numbers__one digit">1</button>
           <button type="button" value="2" class="numbers__two digit">2</button>
-          <button type="button" value="3" class="numbers__three digit">3</button>
-          <button type="button" value="-" class="numbers__minus operation">-</button>
+          <button type="button" value="3" class="numbers__three digit">
+            3
+          </button>
+          <button type="button" value="-" class="numbers__minus operation">
+            -
+          </button>
           <button type="button" value="." class="numbers__dot digit">.</button>
           <button type="button" value="0" class="numbers__zero digit">0</button>
-          <button type="button" value="/" class="numbers__divide operation">/</button>
-          <button type="button" value="*" class="numbers__multiply operation">x</button>
+          <button type="button" value="/" class="numbers__divide operation">
+            /
+          </button>
+          <button type="button" value="*" class="numbers__multiply operation">
+            x
+          </button>
         </div>
         <div class="actions">
-          <button type="button" value="reset" class="actions__reset reset">RESET</button>
-          <button type="button" value="=" class="actions__equal operation">=</button>
+          <button type="button" value="reset" class="actions__reset reset">
+            RESET
+          </button>
+          <button type="button" value="=" class="actions__equal operation">
+            =
+          </button>
         </div>
       </div>
     </section>
 
     <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Dawid Klos</a>.
+      Challenge by
+      <a
+        href="https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29"
+        target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Dawid Klos</a>.
     </div>
-
   </body>
 </html>
