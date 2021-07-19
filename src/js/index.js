@@ -4,8 +4,6 @@ import "../scss/main.scss";
 // import {registerSW} from './pwa.js';
 // registerSW();
 
-/* place your code below */
-
 const calculator = {
   currentDisplay: "0",
   firstNumber: null,
@@ -65,31 +63,26 @@ buttons.addEventListener("click", (event) => {
 
   if (target.classList.contains("digit")) {
     
-    if (calculator.currentDisplay.includes('.') && target.value == ".") {
-      console.log("1");
+    if (typeof calculator.currentDisplay == "string" && calculator.currentDisplay.includes(".") && target.value == ".") {
       return;
     }
 
     if (calculator.currentDisplay == "0" && target.value == ".") {
-      console.log("2");
       target.value = "0.";
     }
 
     if (calculator.currentDisplay == "0" && target.value == "0") {
       calculator.currentDisplay = "0";
-      console.log("3");
       updateResultOnDisplay();
       return;
     }
 
     if (calculator.currentDisplay == "0" && target.value !== "0") {
-      console.log("4");
       calculator.currentDisplay = target.value;
     } else {
       calculator.currentDisplay += target.value;
-      console.log("4");
     }
-
+    console.log(calculator.currentDisplay);
     updateResultOnDisplay();
     return;
   }
@@ -118,6 +111,7 @@ buttons.addEventListener("click", (event) => {
     } else {
       calculator.currentDisplay = calculator.currentDisplay.slice(0, -1);
     }
+    console.log(calculator.currentDisplay);
     updateResultOnDisplay();
     return;
   }
