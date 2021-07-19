@@ -4,19 +4,106 @@
     }
     .result {
         width: 90%;
+        padding: 2px 16px;
+        &__number {
+            font-size: 36px;
+        }
     }
     .buttons {
         width: 90%;
     }    
-    .numbers button {
+    .btn {
+        font-size: 28px;
         width: 64px;
         padding: 8px;
-        margin: 8px;
-        min-height: 74px;
+        margin: 6px;
+        min-height: 70px;
     }
-    .actions button {
-        margin: 8px;
-        min-height: 74px;
+    .btn-del {
+        font-size: 16px;
+        width: 64px;
+        padding: 8px;
+        margin: 6px;
+        min-height: 70px;
     }
+    .btn-reset {
+        font-size: 16px;
+        padding: 8px;
+        margin: 6px;
+        min-height: 70px;
+    }
+    .btn-equal {
+        font-size: 16px;
+        padding: 8px;
+        margin: 6px;
+        min-height: 70px;
+    }
+    .attribution {
+        font-size: 12px;
+        margin: 36px 0px;
+      }
+}
 
+@media (max-width: 375px) {
+    .btn {
+        font-size: 24px;
+        width: 60px;
+        margin: 6px;
+        min-height: 64px;
+    }
+    .btn-del {
+        font-size: 16px;
+        width: 60px;
+        margin: 6px;
+        min-height: 64px;
+    }
+    .btn-reset {
+        font-size: 16px;
+        padding: 8px;
+        max-height: 66px;
+    }
+    .btn-equal {
+        font-size: 16px;
+        padding: 8px;
+
+        max-height: 66px;
+    }
+    .attribution {
+        width: 65%;
+        font-size: 12px;
+        line-height: 26px;
+        margin-top: 30px;
+      }
+}
+
+@media (max-width: 340px) {
+    .btn {
+        font-size: 24px;
+        width: 56px;
+        padding: 6px;
+        margin: 6px;
+        min-height: 60px;
+    }
+    .btn-del {
+        font-size: 16px;
+        width: 56px;
+        padding: 6px;
+        margin: 6px;
+        min-height: 60px;
+    }
+    .btn-reset {
+        font-size: 16px;
+        padding: 8px;
+        max-height: 64px;
+    }
+    .btn-equal {
+        font-size: 16px;
+        padding: 8px;
+        max-height: 64px;
+    }
+    .attribution {
+        width: 70%;
+        font-size: 12px;
+        margin-top: 30px;
+      }
 }
