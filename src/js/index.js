@@ -17,35 +17,35 @@ function updateResultOnDisplay() {
 }
 updateResultOnDisplay();
 
+function resetCalculatorProperties() {
+  calculator.currentDisplay = 0;
+  calculator.firstNumber = 0;
+  calculator.waitingForSecondNumber = false;
+  calculator.operation = null;
+}
+
+
 function calculate(operation, firstNumber, secondNumber) {
   switch (operation) {
     case "+":
       calculator.currentDisplay = Number(firstNumber) + Number(secondNumber);
       updateResultOnDisplay();
-      calculator.currentDisplay = 0;
-      calculator.firstNumber = 0;
-      calculator.waitingForSecondNumber = false;
+      resetCalculatorProperties();
       break;
     case "-":
       calculator.currentDisplay = Number(firstNumber) - Number(secondNumber);
       updateResultOnDisplay();
-      calculator.currentDisplay = 0;
-      calculator.firstNumber = 0;
-      calculator.waitingForSecondNumber = false;
+      resetCalculatorProperties();
       break;
     case "*":
       calculator.currentDisplay = Number(firstNumber) * Number(secondNumber);
       updateResultOnDisplay();
-      calculator.currentDisplay = 0;
-      calculator.firstNumber = 0;
-      calculator.waitingForSecondNumber = false;
+      resetCalculatorProperties();
       break;
     case "/":
       calculator.currentDisplay = Number(firstNumber) / Number(secondNumber);
       updateResultOnDisplay();
-      calculator.currentDisplay = 0;
-      calculator.firstNumber = 0;
-      calculator.waitingForSecondNumber = false;
+      resetCalculatorProperties();
       break;
   }
 }
@@ -62,17 +62,16 @@ buttons.addEventListener("click", (event) => {
   }
 
   if (target.classList.contains("digit")) {
-    
     if (typeof calculator.currentDisplay == "string" && calculator.currentDisplay.includes(".") && target.value == ".") {
       return;
     }
 
-    if (calculator.currentDisplay == "0" && target.value == ".") {
-      target.value = "0.";
+    if (calculator.currentDisplay == "0" && target.value == "0") {
+      return;
     }
 
-    if (calculator.currentDisplay == "0" && target.value == "0") {
-      calculator.currentDisplay = "0";
+    if (calculator.currentDisplay == "0" && target.value == ".") {
+      calculator.currentDisplay = "0.";
       updateResultOnDisplay();
       return;
     }
@@ -82,7 +81,6 @@ buttons.addEventListener("click", (event) => {
     } else {
       calculator.currentDisplay += target.value;
     }
-    console.log(calculator.currentDisplay);
     updateResultOnDisplay();
     return;
   }
@@ -95,6 +93,9 @@ buttons.addEventListener("click", (event) => {
         calculator.currentDisplay
       );
     } else {
+      if(calculator.waitingForSecondNumber == true) {
+        return;
+      }
       calculator.firstNumber = calculator.currentDisplay;
       calculator.currentDisplay = "0";
       updateResultOnDisplay();
@@ -109,15 +110,16 @@ buttons.addEventListener("click", (event) => {
     if (calculator.currentDisplay.length == 1) {
       calculator.currentDisplay = 0;
     } else {
-      calculator.currentDisplay = calculator.currentDisplay.slice(0, -1);
+      if (typeof calculator.currentDisplay == "string") {
+        calculator.currentDisplay = calculator.currentDisplay.slice(0, -1);
+      }
     }
-    console.log(calculator.currentDisplay);
     updateResultOnDisplay();
     return;
   }
 
   if (target.classList.contains("reset")) {
-    calculator.currentDisplay = "0";
+    resetCalculatorProperties();
     updateResultOnDisplay();
     return;
   }
@@ -157,7 +159,7 @@ theme.addEventListener('change' , (event) => {
       btnEqual.style.background = "#c94431";
       btnEqual.style.boxShadow = "inset  0px -4px #793329";
       btnEqual.style.color = "#fffeff";
-
+      document.documentElement.style.setProperty('--thumb-color', '#c94431');
       break;
     case "1":
       body.style.background = "#e6e6e6";
@@ -173,6 +175,7 @@ theme.addEventListener('change' , (event) => {
       btnEqual.style.background = "#c75403";
       btnEqual.style.boxShadow = "inset  0px -4px #893a02";
       btnEqual.style.color = "#fffeff";
+      document.documentElement.style.setProperty('--thumb-color', '#c75403');
       break;
     case "2":
       body.style.background = "#17062a";
@@ -188,6 +191,7 @@ theme.addEventListener('change' , (event) => {
       btnEqual.style.background = "#00decf";
       btnEqual.style.boxShadow = "inset  0px -4px #6ef7ef";
       btnEqual.style.color = "black";
+      document.documentElement.style.setProperty('--thumb-color', '#00decf');
       break;
   }
 });
