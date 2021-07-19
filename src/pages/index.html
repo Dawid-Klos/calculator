@@ -158,14 +158,16 @@
       media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
     />
   </head>
-  <body>
+  <body class="body">
     <section class="calculator">
       <div class="title">
         <h1 class="title__heading">calc</h1>
 
         <div class="theme">
-          <p class="theme__text">THEME</p>
-          <input class="theme__input" type="range" value="0" min="0" max="2" />
+          <div class="theme__empty"></div>
+          <p class="theme__position">1 2 3</p>
+          <label class="theme__text">THEME</label>
+          <input class="theme__input theme--js" type="range" value="0" min="0" max="2" />
         </div>
       </div>
 
@@ -175,44 +177,44 @@
 
       <div class="buttons buttons--js">
         <div class="numbers">
-          <button type="button" value="7" class="numbers__seven digit">
+          <button type="button" value="7" class="numbers__seven digit btn">
             7
           </button>
-          <button type="button" value="8" class="numbers__eight digit">
+          <button type="button" value="8" class="numbers__eight digit btn">
             8
           </button>
-          <button type="button" value="9" class="numbers__nine digit">9</button>
-          <button type="button" value="delete" class="numbers__delete clear">
+          <button type="button" value="9" class="numbers__nine digit btn">9</button>
+          <button type="button" value="delete" class="numbers__delete clear btn-del">
             DEL
           </button>
-          <button type="button" value="4" class="numbers__four digit">4</button>
-          <button type="button" value="5" class="numbers__five digit">5</button>
-          <button type="button" value="6" class="numbers__six digit">6</button>
-          <button type="button" value="+" class="numbers__plus operation">
+          <button type="button" value="4" class="numbers__four digit btn">4</button>
+          <button type="button" value="5" class="numbers__five digit btn">5</button>
+          <button type="button" value="6" class="numbers__six digit btn">6</button>
+          <button type="button" value="+" class="numbers__plus operation btn">
             +
           </button>
-          <button type="button" value="1" class="numbers__one digit">1</button>
-          <button type="button" value="2" class="numbers__two digit">2</button>
-          <button type="button" value="3" class="numbers__three digit">
+          <button type="button" value="1" class="numbers__one digit btn">1</button>
+          <button type="button" value="2" class="numbers__two digit btn">2</button>
+          <button type="button" value="3" class="numbers__three digit btn">
             3
           </button>
-          <button type="button" value="-" class="numbers__minus operation">
+          <button type="button" value="-" class="numbers__minus operation btn">
             -
           </button>
-          <button type="button" value="." class="numbers__dot digit">.</button>
-          <button type="button" value="0" class="numbers__zero digit">0</button>
-          <button type="button" value="/" class="numbers__divide operation">
+          <button type="button" value="." class="numbers__dot digit btn">.</button>
+          <button type="button" value="0" class="numbers__zero digit btn">0</button>
+          <button type="button" value="/" class="numbers__divide operation btn">
             /
           </button>
-          <button type="button" value="*" class="numbers__multiply operation">
+          <button type="button" value="*" class="numbers__multiply operation btn">
             x
           </button>
         </div>
         <div class="actions">
-          <button type="button" value="reset" class="actions__reset reset">
+          <button type="button" value="reset" class="actions__reset reset btn-reset">
             RESET
           </button>
-          <button type="button" value="=" class="actions__equal operation">
+          <button type="button" value="=" class="actions__equal operation btn-equal">
             =
           </button>
         </div>

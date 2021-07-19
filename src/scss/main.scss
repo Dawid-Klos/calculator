@@ -2,12 +2,13 @@
 @import "_variables";
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;800&display=swap');
 
+
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
 body {
-  background: $bg;
-  color: $font-white;
+  background: #3b4664;
+  color: $font;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,32 +36,34 @@ body {
 }
 
 .theme {
-  display: flex;
-  flex-flow: row nowrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 20px 1fr;
+  justify-items: center;
   align-items: center;
+  column-gap: 8px;
+    &__empty {
 
-    &__text {
-      font-weight: 700;
+    }
+    &__position {
+      width: 100%;
       font-size: 12px;
-      margin-right: 24px;
+      font-weight: 600;
+      letter-spacing: 5px;
+      align-self: flex-start;
+      margin: 20px -14px 0px 4px;
+    }
+    &__text {
+      font-weight: 600;
+      font-size: 12px;
     }
     &__input {
-      width: 60px;
+      width: 55px;
       -webkit-appearance: none;
       appearance: none;
       background-color: $bg-bottom;
       border-radius: 36px;
       padding: 4px;
-    }
-    &__input::before {
-      position: absolute;
-      margin-top: -20px;
-      margin-left: 4px;
-      width: 54px;
-      color: $font-white;
-      font-weight: 600;
-      content: "1 \00a0 \00a0 \00a0 \00a0 2 \00a0 \00a0 \00a0 \00a0 3";
-      font-size: 12px;
     }
 }
 
@@ -113,7 +116,8 @@ input[type=range]::-ms-thumb {
   padding: 16px;
   border-radius: 10px;
 }
-.numbers button {
+
+.btn {
   border: none;
   background-color: $button;
   width: 94px;
@@ -122,10 +126,36 @@ input[type=range]::-ms-thumb {
   justify-self: center;
   margin: 11px;
   padding: 12px;
-  color: $font-blue;
+  color: $font-second;
   border-radius: 8px;
   box-shadow: inset  0px -4px $button-shadow;
 }
+
+.btn-del {
+  border: none;
+  width: 94px;
+  font-weight: 600;
+  justify-self: center;
+  margin: 11px;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 18px ;
+  color: $font;
+  background-color: $accent2;
+  box-shadow: inset  0px -4px #495061;
+}
+
+.btn-reset {
+  background-color: $accent2;
+  box-shadow: inset  0px -4px #495061;
+  font-weight: 400;
+}
+
+.btn-equal {
+  background-color: $accent1;
+  box-shadow: inset  0px -4px #793329;
+}
+
 .numbers {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -140,10 +170,7 @@ input[type=range]::-ms-thumb {
 
     }
     &__delete {
-      font-size: 18px !important;
-      color: $font-white !important;
-      background-color: $accent2 !important;
-      box-shadow: inset  0px -4px #495061 !important;
+
     }
     &__four {
 
@@ -188,13 +215,8 @@ input[type=range]::-ms-thumb {
   flex-flow: row nowrap;
   justify-content: space-around;
   &__reset {
-    background-color: $accent2;
-    box-shadow: inset  0px -4px #32384b;
-    font-weight: 400;
   }
   &__equal {
-    background-color: $accent1;
-    box-shadow: inset  0px -4px #793329;
   }
 }
 
@@ -202,7 +224,7 @@ input[type=range]::-ms-thumb {
   border-radius: 8px;
   margin: 16px;
   padding: 12px;
-  color: $font-white;
+  color: $font;
   font-weight: bold;
   width: 100%;
   height: 54px;
@@ -213,5 +235,4 @@ input[type=range]::-ms-thumb {
   font-size: 14px;
   margin-top: 64px;
 }
-
 @import "breakpoints.scss";
