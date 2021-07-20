@@ -37,7 +37,7 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - CSS custom properties
-- -SCSS variables
+- SCSS variables
 - Flexbox
 - CSS Grid
 - Webpack
