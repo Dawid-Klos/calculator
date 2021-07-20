@@ -8,10 +8,7 @@ This is a solution to the [Calculator app challenge on Frontend Mentor](https://
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
-- [My process](#my-process)
   - [Built with](#built-with)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 
 
@@ -32,19 +29,20 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://dawid-klos.github.io/calculator/)
+- Solution URL: [Solution](https://your-solution-url.com)
+- Live Site URL: [LIVE](https://dawid-klos.github.io/calculator/)
 
-## My process
 
 ### Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
+- -SCSS variables
 - Flexbox
 - CSS Grid
+- Webpack
 
 ## Author
 
 - Website - [Dawid Klos](https://dawid-klos.github.io/)
-- Frontend Mentor - [@Dawid-Klos](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@Dawid-Klos](https://www.frontendmentor.io/profile/Dawid-Klos)
