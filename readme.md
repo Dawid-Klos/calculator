@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](https://your-solution-url.com)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/webpack-with-scss-flexbox-and-grid-oHeWTu-qz)
 - Live Site URL: [LIVE](https://dawid-klos.github.io/calculator/)
 
 
@@ -37,9 +37,9 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - CSS custom properties
-- SCSS variables
-- Flexbox
+- CSS Flexbox
 - CSS Grid
+- SCSS variables
 - Webpack
 
 ## Author
